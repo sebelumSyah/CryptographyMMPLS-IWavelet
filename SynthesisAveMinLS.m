@@ -20,7 +20,7 @@ for i=1:b1
     if i==1
         od(i)=De(i)+ev(i);
     else
-        od(i)=De(i)+ceil((ev(i-1)+ev(i))/2);
+        od(i)=De(i)+floor((ev(i-1)+ev(i))/2);
     end
 end
 for i=1:b1+b2
