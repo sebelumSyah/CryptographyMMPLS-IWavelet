@@ -19,14 +19,14 @@ for i=1:b1
     if i==1
         De(i)=od(i)-ev(i);
     else
-        De(i)=od(i)-max(ev(i-1),ceil((ev(i-1)+ev(i))/2));
+        De(i)=od(i)-max(ev(i-1),floor((ev(i-1)+ev(i))/2));
     end
 end
 for i=1:b2
     if i==b2
         Ap(i)=ev(i)+min(0,De(i));
     else
-        Ap(i)=ev(i)+min(0,min(De(i),ceil((De(i+1)+De(i))/2)));
+        Ap(i)=ev(i)+min(0,min(De(i),floor((De(i+1)+De(i))/2)));
     end
 end
 c=[Ap De];
