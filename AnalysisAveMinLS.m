@@ -19,7 +19,7 @@ for i=1:b1
     if i==1
         De(i)=od(i)-ev(i);
     else
-        De(i)=od(i)-ceil((ev(i-1)+ev(i))/2);
+        De(i)=od(i)-floor((ev(i-1)+ev(i))/2);
     end
 end
 for i=1:b2
