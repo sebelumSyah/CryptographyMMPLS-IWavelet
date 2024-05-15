@@ -13,14 +13,14 @@ for i=1:b1
     if i==b2
         ev(i)=Ap(i)-min(0,De(i));
     else
-        ev(i)=Ap(i)-min(0,min(De(i),ceil((De(i+1)+De(i))/2)));
+        ev(i)=Ap(i)-min(0,min(De(i),floor((De(i+1)+De(i))/2)));
     end
 end
 for i=1:b1
     if i==1
         od(i)=De(i)+ev(i);
     else
-        od(i)=De(i)+max(ev(i-1),ceil((ev(i-1)+ev(i))/2));
+        od(i)=De(i)+max(ev(i-1),floor((ev(i-1)+ev(i))/2));
     end
 end
 for i=1:b1+b2
