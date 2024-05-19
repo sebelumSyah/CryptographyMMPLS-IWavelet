@@ -1,4 +1,8 @@
 function [ChiperText KS Kode t modulo result]=EncryptionMaxMin(A,KeyLevel,biner)
+%%% EXAMPLE
+%%%INPUT : A='max-plus algebra 2024'
+%%%KeyLevel=[2 3 3];
+%%%biner=16
 tic
 textASCII=double(A);
 
